@@ -1,0 +1,145 @@
+[gd_scene load_steps=23 format=3 uid="uid://bfco2smbtlcjb"]
+
+[ext_resource type="PackedScene" uid="uid://dgq5koce1ad5s" path="res://pool_table.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://csrglxeth2v8d" path="res://cue.gd" id="2_cegan"]
+[ext_resource type="PackedScene" uid="uid://bqryfbnd0sidr" path="res://1ball.tscn" id="3_074og"]
+[ext_resource type="PackedScene" uid="uid://6vv11jip8hyo" path="res://2ball.tscn" id="4_cegan"]
+[ext_resource type="PackedScene" uid="uid://cjruq4sf1625t" path="res://3ball.tscn" id="5_82xsv"]
+[ext_resource type="PackedScene" uid="uid://crxrtvd1uq0a" path="res://4ball.tscn" id="6_getpj"]
+[ext_resource type="PackedScene" uid="uid://brqdpob8tawf6" path="res://5ball.tscn" id="7_ryguw"]
+[ext_resource type="PackedScene" uid="uid://3wbjphyc7ngt" path="res://6ball.tscn" id="8_d13ii"]
+[ext_resource type="PackedScene" uid="uid://cnrsv1sor8m3v" path="res://7ball.tscn" id="9_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://p3nkpjmc1f5d" path="res://8ball.tscn" id="10_0odxb"]
+[ext_resource type="PackedScene" uid="uid://d15p376vuu36e" path="res://9ball.tscn" id="11_lswn8"]
+[ext_resource type="PackedScene" uid="uid://cbt6efgl3uof" path="res://10ball.tscn" id="12_a6jrf"]
+[ext_resource type="PackedScene" uid="uid://ddywfp56ncmu1" path="res://11ball.tscn" id="13_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://qldvq0jjvf5b" path="res://12ball.tscn" id="14_qsp4k"]
+[ext_resource type="PackedScene" uid="uid://ctfwbqm7x6rvt" path="res://13ball.tscn" id="15_kq58d"]
+[ext_resource type="PackedScene" uid="uid://c8ey2dx0jecrm" path="res://14ball.tscn" id="16_seu75"]
+[ext_resource type="PackedScene" uid="uid://b7acu6gmilro" path="res://15ball.tscn" id="17_htxhm"]
+[ext_resource type="PackedScene" uid="uid://c5nlycdmsafo4" path="res://cue.tscn" id="18_074og"]
+[ext_resource type="PackedScene" uid="uid://ci0ihega6xyju" path="res://cueball.tscn" id="18_jq2sk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_82xsv"]
+friction = 0.0
+bounce = 0.36
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_getpj"]
+rough = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cegan"]
+friction = 0.51
+rough = true
+bounce = 0.08
+
+[node name="main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 5.434
+shadow_enabled = true
+
+[node name="cue" parent="." instance=ExtResource("18_074og")]
+transform = Transform3D(-1, 0, -8.74228e-08, 2.19244e-08, 0.968043, -0.250786, 8.4629e-08, -0.250786, -0.968043, 0, 0.296869, 1.81079)
+physics_material_override = SubResource("PhysicsMaterial_82xsv")
+gravity_scale = 0.0
+script = ExtResource("2_cegan")
+
+[node name="PoolTable" parent="." instance=ExtResource("1_0xm2m")]
+physics_material_override = SubResource("PhysicsMaterial_getpj")
+
+[node name="Ball1" parent="." instance=ExtResource("3_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0103151, 0.105254, -0.171676)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball2" parent="." instance=ExtResource("4_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0506645, 0.105254, -0.269737)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball3" parent="." instance=ExtResource("5_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0363585, 0.105254, -0.221275)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball4" parent="." instance=ExtResource("6_getpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462992, 0.105254, -0.37507)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball5" parent="." instance=ExtResource("7_ryguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0362545, 0.105254, -0.322771)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball6" parent="." instance=ExtResource("8_d13ii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0961096, 0.105254, -0.324334)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball7" parent="." instance=ExtResource("9_1u8w0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0809901, 0.105254, -0.321973)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball8" parent="." instance=ExtResource("10_0odxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0070899, 0.105254, -0.271098)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball9" parent="." instance=ExtResource("11_lswn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022567, 0.105254, -0.321619)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball10" parent="." instance=ExtResource("12_a6jrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0648284, 0.105254, -0.272862)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball11" parent="." instance=ExtResource("13_xuqvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0197673, 0.105254, -0.219616)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball12" parent="." instance=ExtResource("14_qsp4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064294, 0.105254, -0.374282)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball13" parent="." instance=ExtResource("15_kq58d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112608, 0.105254, -0.37528)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball14" parent="." instance=ExtResource("16_seu75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125793, 0.105254, -0.376028)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="Ball15" parent="." instance=ExtResource("17_htxhm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0535513, 0.105254, -0.374183)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
+
+[node name="CueBall" parent="." instance=ExtResource("18_jq2sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103531, 1.05282)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_cegan")
