@@ -7,15 +7,29 @@ extends Node3D
 @export var max_force := 12.0
 @export var charge_rate := 8.0
 @export var CueBall: RigidBody3D
+@export var max_pullback := 0.4
+@export var snap_speed := 20.0
 
 var charge := 0.0
 var charging := false
+var rest_position : Vector3
+var pull_offset := 0.0
+var snapping := false
+
+func _ready():
+	return
+	
+	
 
 func _process(delta):
 	cue_movement(delta)
 	cue_rotation(delta)
 	lock_height()
 	shot_charge(delta)
+	if not charging and not snapping:
+		rest_position = global_position
+	if snapping:
+		snap_forward(delta)
 
 func cue_movement(delta):
 	var input_dir = Vector3.ZERO
@@ -52,13 +66,17 @@ func shot_charge(delta):
 		print("charging")
 		charging = true
 		charge = min_force
+		snapping = false
+		
 	if charging and Input.is_action_pressed("shoot"):
 		charge += charge_rate * delta
 		charge = clamp(charge, min_force, max_force)
+		update_pullback_visual()
+		
 	if Input.is_action_just_released("shoot"):
 		print("shoot")
 		charging = false
-		shoot_ball()
+		snapping = true
 
 func shoot_ball():
 	if CueBall == null:
@@ -67,3 +85,17 @@ func shoot_ball():
 	var impulse = direction * charge
 	CueBall.apply_impulse(impulse)
 	charge = 0.0
+
+func update_pullback_visual():
+	var forward_dir = -global_transform.basis.z.normalized()
+	var pull_percent = charge / max_force
+	pull_offset = pull_percent * max_pullback
+	global_position = rest_position + (forward_dir * pull_offset)
+	
+func snap_forward(delta):
+	global_position = global_position.lerp(rest_position, snap_speed * delta)
+
+	if global_position.distance_to(rest_position) < 0.01:
+		global_position = rest_position
+		snapping = false
+		shoot_ball()

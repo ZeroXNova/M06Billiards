@@ -75,7 +75,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0slub")
 
-[node name="Ball" type="RigidBody3D"]
+[node name="CueBall" type="RigidBody3D"]
 script = ExtResource("1_icag3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
