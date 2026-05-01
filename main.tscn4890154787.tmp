@@ -26,6 +26,7 @@ friction = 0.0
 bounce = 0.36
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_getpj"]
+rough = true
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cegan"]
 friction = 0.32
@@ -48,7 +49,7 @@ script = ExtResource("2_cegan")
 physics_material_override = SubResource("PhysicsMaterial_getpj")
 
 [node name="Ball1" parent="." groups=["balls"] instance=ExtResource("3_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0103151, 1.97298, -0.171676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0103151, 11.1192, -0.171676)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -56,7 +57,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball2" parent="." groups=["balls"] instance=ExtResource("4_cegan")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0506645, 1.97298, -0.269737)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0506645, 11.1192, -0.269737)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -64,7 +65,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball3" parent="." groups=["balls"] instance=ExtResource("5_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0363585, 1.97298, -0.221275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0363585, 11.1192, -0.221275)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -72,7 +73,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball4" parent="." groups=["balls"] instance=ExtResource("6_getpj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462992, 1.97298, -0.37507)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462992, 11.1192, -0.37507)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -80,7 +81,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball5" parent="." groups=["balls"] instance=ExtResource("7_ryguw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0362545, 1.97298, -0.322771)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0362545, 11.1192, -0.322771)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -88,7 +89,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball6" parent="." groups=["balls"] instance=ExtResource("8_d13ii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0961096, 1.97298, -0.324334)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0961096, 11.1192, -0.324334)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -96,7 +97,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball7" parent="." groups=["balls"] instance=ExtResource("9_1u8w0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0809901, 1.97298, -0.321973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0809901, 11.1192, -0.321973)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -104,14 +105,15 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball8" parent="." groups=["balls"] instance=ExtResource("10_0odxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0070899, 1.97298, -0.271098)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0070899, 11.1192, -0.271098)
+collision_layer = 4
 collision_mask = 7
 mass = 0.165
 physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball9" parent="." groups=["balls"] instance=ExtResource("11_lswn8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022567, 1.97298, -0.321619)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022567, 11.1192, -0.321619)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -119,7 +121,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball10" parent="." groups=["balls"] instance=ExtResource("12_a6jrf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0648284, 1.97298, -0.272862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0648284, 11.1192, -0.272862)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -127,7 +129,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball11" parent="." groups=["balls"] instance=ExtResource("13_xuqvo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0197673, 1.97298, -0.219616)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0197673, 11.1192, -0.219616)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -135,7 +137,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball12" parent="." groups=["balls"] instance=ExtResource("14_qsp4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064294, 1.97298, -0.374282)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064294, 11.1192, -0.374282)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -143,7 +145,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball13" parent="." groups=["balls"] instance=ExtResource("15_kq58d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112608, 1.97298, -0.37528)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112608, 11.1192, -0.37528)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -151,7 +153,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball14" parent="." groups=["balls"] instance=ExtResource("16_seu75")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125793, 1.97298, -0.376028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125793, 11.1192, -0.376028)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -159,7 +161,7 @@ physics_material_override = SubResource("PhysicsMaterial_cegan")
 metadata/_edit_group_ = true
 
 [node name="Ball15" parent="." groups=["balls"] instance=ExtResource("17_htxhm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0535513, 1.97298, -0.374183)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0535513, 11.1192, -0.374183)
 collision_layer = 4
 collision_mask = 7
 mass = 0.165
@@ -168,6 +170,7 @@ metadata/_edit_group_ = true
 
 [node name="CueBall" parent="." groups=["cueBall"] instance=ExtResource("18_jq2sk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000210717, 1.78695, 16.2579)
+collision_layer = 4
 collision_mask = 7
 mass = 0.165
 physics_material_override = SubResource("PhysicsMaterial_cegan")

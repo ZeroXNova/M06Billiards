@@ -76,12 +76,15 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0slub")
 
 [node name="CueBall" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_icag3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(18.405, 0, 0, 0, 18.405, 0, 0, 0, 18.405, 0, 0, 0)
 shape = SubResource("SphereShape3D_dq4j1")
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0285, 0, 0, 0, 0.0285, 0, 0, 0, 0.0285, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_35sbt")
 skeleton = NodePath("")

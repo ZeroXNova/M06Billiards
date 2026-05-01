@@ -79,9 +79,10 @@ shadow_mesh = SubResource("ArrayMesh_nlga4")
 script = ExtResource("1_8pcnf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(17.24, 0, 0, 0, 17.24, 0, 0, 0, 17.24, 0, 0, 0)
 shape = SubResource("SphereShape3D_dq4j1")
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0285, 0, 0, 0, 0.0285, 0, 0, 0, 0.0285, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_im28c")
 skeleton = NodePath("")
